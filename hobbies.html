@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="hobbies.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="initialize()">
+    <!-- Call initialize() function when the page loads -->
+    <header>
+      <nav>
+        <h1 class="logo">Lem <span>Website</span></h1>
+        <svg
+          width="40px"
+          height="40px"
+          class="kebab"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <circle
+              cx="12"
+              cy="6"
+              r="2"
+              transform="rotate(90 12 6)"
+              fill="#FF9900"
+            ></circle>
+            <circle
+              cx="12"
+              cy="12"
+              r="2"
+              transform="rotate(90 12 12)"
+              fill="#FF9900"
+            ></circle>
+            <path
+              d="M12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18C14 19.1046 13.1046 20 12 20Z"
+              fill="#FF9900"
+            ></path>
+          </g>
+        </svg>
+        <ul id="menu">
+          <li>
+            <a
+              href="file:///C:/Users/ADMIN/Documents/web%20pages/Homepages.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="file:///C:/Users/ADMIN/Documents/web%20pages/About.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="file:///C:/Users/ADMIN/Documents/web%20pages/hobbies.html"
+              class="Active"
+              >Hobbies</a
+            >
+          </li>
+          <li>
+            <a href="file:///C:/Users/ADMIN/Documents/web%20pages/Contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="main">
+      <div class="image">
+        <div class="title">Mobile Legends</div>
+        <div class="first-batch">
+          <!-- Initially displayed -->
+
+          <img class="img1" src="Screenshot_20240325-163643.png" />
+          <img class="img2" src="Screenshot_20240325-163742.png" />
+        </div>
+        <div class="second-batch">
+          <!-- Initially hidden -->
+
+          <img class="img3" src="sololeveling.jpg" />
+          <img class="img4" src="shangrila.webp" />
+        </div>
+      </div>
+      <div class="pagination">
+        <button class="prev" onclick="prevImage()">Prev</button>
+        <button class="nums" onclick="showImage(1)">1</button>
+        <button class="nums" onclick="showImage(2)">2</button>
+        <button class="next" onclick="nextImage()">Next</button>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Lem Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      let currentImageIndex = 0;
+      const images = document.querySelectorAll(".image img");
+      const numButtons = document.querySelectorAll(".nums");
+      const title = document.querySelector(".title");
+
+      function initialize() {
+        showImage(1); // Display first batch of images by default
+      }
+
+      function showImage(index) {
+        const startIndex = (index - 1) * 2;
+        const endIndex = startIndex + 1;
+        images.forEach((img, i) => {
+          if (i >= startIndex && i <= endIndex) {
+            img.style.display = "block";
+          } else {
+            img.style.display = "none";
+          }
+        });
+        currentImageIndex = startIndex;
+        updateButtonStyles();
+
+        // Change title based on which num button is clicked
+        if (index === 1) {
+          title.textContent = "Mobile Legends";
+        } else if (index === 2) {
+          title.textContent = "Anime";
+        }
+      }
+
+      function prevImage() {
+        if (currentImageIndex > 0) {
+          currentImageIndex -= 2;
+          showImage(Math.floor(currentImageIndex / 2) + 1);
+        }
+      }
+
+      function nextImage() {
+        if (currentImageIndex < images.length - 2) {
+          currentImageIndex += 2;
+          showImage(Math.floor(currentImageIndex / 2) + 1);
+        }
+      }
+
+      function updateButtonStyles() {
+        numButtons.forEach((button, index) => {
+          if (Math.floor(currentImageIndex / 2) === index) {
+            button.classList.add("active");
+          } else {
+            button.classList.remove("active");
+          }
+        });
+
+        const prevButton = document.querySelector(".prev");
+        const nextButton = document.querySelector(".next");
+        if (currentImageIndex === 0) {
+          prevButton.classList.add("active");
+          nextButton.classList.remove("active");
+        } else if (currentImageIndex === images.length - 2) {
+          prevButton.classList.remove("active");
+          nextButton.classList.add("active");
+        } else {
+          prevButton.classList.remove("active");
+          nextButton.classList.remove("active");
+        }
+      }
+    </script>
+    <script>
+      // Function to toggle nav menu display
+      function toggleMenu() {
+        // Check screen width
+        if (window.innerWidth <= 1100) {
+          var navMenu = document.getElementById("menu");
+          if (
+            navMenu.style.display === "none" ||
+            navMenu.style.display === ""
+          ) {
+            navMenu.style.display = "flex";
+          } else {
+            navMenu.style.display = "none";
+          }
+        }
+      }
+
+      // Function to check screen width and disable/enable toggleMenu function
+      function checkScreenWidth() {
+        if (window.innerWidth > 1100) {
+          document
+            .querySelector(".kebab")
+            .removeEventListener("click", toggleMenu);
+        } else {
+          document
+            .querySelector(".kebab")
+            .addEventListener("click", toggleMenu);
+        }
+      }
+
+      // Initial check when the page loads
+      checkScreenWidth();
+
+      // Add event listener for window resize events
+      window.addEventListener("resize", checkScreenWidth);
+    </script>
+  </body>
+</html>
