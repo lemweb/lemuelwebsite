@@ -209,6 +209,12 @@ nav ul li a {
 }
 
 @media only screen and (max-width: 994px) {
+
+    header {
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+  }
   .kebab {
     display: flex;
   }
