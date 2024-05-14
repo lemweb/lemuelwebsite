@@ -1,0 +1,145 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    
+}
+.icons{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: rgb(255, 162, 0);
+}
+.icons a ion-icon{
+    color: rgb(255, 162, 0);
+}
+
+
+.logo{
+    color: white;
+    font-weight: 780;
+}
+
+span{
+    color :black;
+    background-color: rgb(255, 162, 0);
+    padding: 3px 3px;
+    border-radius: 5px;
+
+}
+
+
+
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1cm 20px;
+    background: black;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container1 .logo{
+    font-size: 25px;
+    margin-top: -5px;
+    
+
+}
+
+
+header {
+    background: black;
+    padding: 20px 0;
+
+   
+}
+
+
+header h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+
+    display: inline;
+    margin-left: 20px;
+    
+}
+
+nav ul li a {
+    color: rgb(255, 162, 0);
+    margin: 17px;
+    text-decoration: none;
+}
+
+ .active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 15CM;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 162, 0);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+
+.details{
+    padding-top: 2cm;
+        color: white;
+    text-align: justify;
+    width: 1000px;
+    padding-left: 8cm;
+    margin-top: 2cm;
+
+}
+.details h1{
+    font-size: 40px;
+
+}
+
+.details p{
+    font-size: 20px;
+
+}
+
+

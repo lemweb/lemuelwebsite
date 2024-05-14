@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    
+}
+
+
+
+.logo{
+    color: white;
+    font-weight: 780;
+}
+
+span{
+    color :black;
+    background-color: rgb(255, 162, 0);
+    padding: 3px 3px;
+    border-radius: 5px;
+
+}
+
+header{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 10px 50px;
+
+}
+
+nav ul{
+
+    width: 60vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+nav ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+
+
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80vh;
+
+    color: white;
+
+    align-items: center;
+    padding: 20vh;
+}
+
+.details{
+
+    width: 70%;
+padding-right: 20vh;
+    margin: 0 auto;
+    display: flex;
+justify-content: center ;
+    flex-direction: column;
+    text-align: start;
+    font-size: 20px;
+
+}
+
+
+.details .heading{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(255, 162, 0);
+}
+
+
+.pic{
+    width: 40%;
+    background-color: chartreuses;
+
+}
+
+.pic img{
+    width: 100%;
+    border-radius: 13px;
+}
+
+footer{
+    color: rgb(164, 164, 164);
+    padding: 10px 40px;
+    font-size: 14px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .main{
+        display: flex;
+        flex-direction:column-reverse;
+
+        width: 100%;
+        height: 100%;
+    
+        color: white;
+
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .details{
+
+        width: 100%;
+    padding-right: 30px !important;
+        margin: 0 auto;
+        display: flex;
+    justify-content: center ;
+        flex-direction: column;
+        text-align: start;
+        font-size: 16px;
+        padding-left: 30px;
+    
+    }
+
+    .pic{
+        width: 80%;
+        background-color: chartreuses;
+    
+    }
+    
+    .pic img{
+        width: 100%;
+        border-radius: 13px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+        padding: 10px 20px;
+    
+    }
+    
+
+    
+  }
+  
+
+  @media only screen and (max-width: 1100px) {
+    .main{
+        display: flex;
+        flex-direction:column-reverse;
+
+        width: 100%;
+        height: 100%;
+    
+        color: white;
+
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .details{
+
+        width: 100%;
+    padding-right: 20vh;
+        margin: 0 auto;
+        display: flex;
+    justify-content: center ;
+        flex-direction: column;
+        text-align: justify;
+        font-size: 16px;
+    
+    }
+    
+  }
+  
+
+

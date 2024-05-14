@@ -1,0 +1,184 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: black;
+}
+
+.logo {
+  color: white;
+  font-weight: 780;
+}
+
+span {
+  color: black;
+  background-color: rgb(255, 162, 0);
+  padding: 3px 3px;
+  border-radius: 5px;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1cm 20px;
+  background: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.container1 .logo {
+  font-size: 25px;
+  margin-top: -5px;
+}
+
+header {
+  background: black;
+  padding: 20px 0;
+}
+
+header h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: rgb(255, 162, 0);
+  margin: 17px;
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 255, 255);
+
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 15cm;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 162, 0);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  padding-top: 2cm;
+  color: white;
+  text-align: justify;
+  width: 1000px;
+  padding-left: 8cm;
+  margin-top: 2cm;
+}
+.details h1 {
+  font-size: 40px;
+}
+
+.details p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    align-items: center;
+    padding: 2vh;
+  }
+
+  .details {
+    width: 100%;
+    padding-right: 30px !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    font-size: 16px;
+    padding-left: 30px;
+  }
+
+  .pic {
+    width: 80%;
+    background-color: chartreuses;
+  }
+
+  .pic img {
+    width: 100%;
+    border-radius: 13px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+
+    width: 100%;
+    height: 100%;
+
+    color: white;
+
+    align-items: center;
+    padding: 2vh;
+  }
+
+  .details {
+    width: 100%;
+    padding-right: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 16px;
+  }
+}
