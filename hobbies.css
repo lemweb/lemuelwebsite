@@ -52,7 +52,7 @@ nav {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 5;
+  z-index: 6;
 }
 
 .kebab:hover {
@@ -226,6 +226,7 @@ nav ul li a {
     justify-content: start;
     padding-top: 30%;
     padding-left: 10%;
+    z-index: 5;
   }
 
   nav ul li {
